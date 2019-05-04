@@ -2,6 +2,6 @@ package br.com.gilmar;
 
 public class ValoresInvalidosException extends Exception{
 	public ValoresInvalidosException(){
-		super("Valores Inv√°lidos.");
+		super("Valores Inv·lidos.");
 	}
 }
