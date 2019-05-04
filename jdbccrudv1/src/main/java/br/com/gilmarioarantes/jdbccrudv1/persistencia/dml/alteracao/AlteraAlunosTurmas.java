@@ -17,14 +17,14 @@ public class AlteraAlunosTurmas extends PersistenciaJdbc {
 
         preparaPersistencia();
 
-        String sql = "UPDATE ALUNOS_TURMAS SET NOTA1 = ? WHERE ID_TURMA = ?";
+        String sql = "UPDATE ALUNOS_TURMAS SET NOTA1 = ? WHERE ID_ALUNOS_TURMAS = ?";
         PreparedStatement pstmt = connection.prepareStatement(sql);
         pstmt.setDouble(1,alunoTurma.getNota1());
         pstmt.setLong(2,alunoTurma.getId());
 
         pstmt.executeUpdate();
 
-        logger.info("A nota1 do AlunoTurma foi alterada com sucesso!");
+        logger.info("A nota1 do Aluno na Turma foi alterada com sucesso!");
 
         pstmt.close();
         stmt.close();
@@ -39,14 +39,14 @@ public class AlteraAlunosTurmas extends PersistenciaJdbc {
 
         preparaPersistencia();
 
-        String sql = "UPDATE ALUNOS_TURMAS SET NOTA2 = ? WHERE ID_TURMA = ?";
+        String sql = "UPDATE ALUNOS_TURMAS SET NOTA2 = ? WHERE ID_ALUNOS_TURMAS = ?";
         PreparedStatement pstmt = connection.prepareStatement(sql);
         pstmt.setDouble(1,alunoTurma.getNota2());
         pstmt.setLong(2,alunoTurma.getId());
 
         pstmt.executeUpdate();
 
-        logger.info("A Nota2 do AlunoTurma foi alterada com sucesso!");
+        logger.info("A Nota2 do Aluno na Turma foi alterada com sucesso!");
 
         pstmt.close();
         stmt.close();
@@ -61,14 +61,14 @@ public class AlteraAlunosTurmas extends PersistenciaJdbc {
 
         preparaPersistencia();
 
-        String sql = "UPDATE ALUNOS_TURMAS SET FREQUENCIA = ? WHERE ID_TURMA = ?";
+        String sql = "UPDATE ALUNOS_TURMAS SET FREQUENCIA = ? WHERE ID_ALUNOS_TURMAS = ?";
         PreparedStatement pstmt = connection.prepareStatement(sql);
         pstmt.setInt(1,alunoTurma.getFrequencia());
         pstmt.setLong(2,alunoTurma.getId());
 
         pstmt.executeUpdate();
 
-        logger.info("A Frequencia do AlunoTurma foi alterada com sucesso!");
+        logger.info("A Frequencia do Aluno na Turma foi alterada com sucesso!");
 
         pstmt.close();
         stmt.close();
@@ -83,14 +83,14 @@ public class AlteraAlunosTurmas extends PersistenciaJdbc {
 
         preparaPersistencia();
 
-        String sql = "UPDATE ALUNOS_TURMAS SET ALUNO = ? WHERE ID_TURMA = ?";
+        String sql = "UPDATE ALUNOS_TURMAS SET ALUNO = ? WHERE ID_ALUNOS_TURMAS = ?";
         PreparedStatement pstmt = connection.prepareStatement(sql);
         pstmt.setLong(1,alunoTurma.getAluno().getId());
         pstmt.setLong(2,alunoTurma.getId());
 
         pstmt.executeUpdate();
 
-        logger.info("O Aluno da AlunoTurma foi alterado com sucesso!");
+        logger.info("O Aluno na Turma foi alterado com sucesso!");
 
         pstmt.close();
         stmt.close();
@@ -105,14 +105,14 @@ public class AlteraAlunosTurmas extends PersistenciaJdbc {
 
         preparaPersistencia();
 
-        String sql = "UPDATE ALUNOS_TURMAS SET TURMA = ? WHERE ID_TURMA = ?";
+        String sql = "UPDATE ALUNOS_TURMAS SET TURMA = ? WHERE ID_ALUNOS_TURMAS = ?";
         PreparedStatement pstmt = connection.prepareStatement(sql);
         pstmt.setLong(1,alunoTurma.getTurma().getId());
         pstmt.setLong(2,alunoTurma.getId());
 
         pstmt.executeUpdate();
 
-        logger.info("A Turma da AlunoTurma foi alterada com sucesso!");
+        logger.info("A Turma na Associação Aluno/Turma foi alterada com sucesso!");
 
         pstmt.close();
         stmt.close();

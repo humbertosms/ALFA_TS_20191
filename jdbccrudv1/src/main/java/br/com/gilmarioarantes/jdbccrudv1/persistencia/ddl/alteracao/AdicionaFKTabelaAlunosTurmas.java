@@ -14,7 +14,7 @@ public class AdicionaFKTabelaAlunosTurmas extends PersistenciaJdbc {
         logger.info("Alterando a Tabela Alunos_Turmas");
 
         String sql = "ALTER TABLE ALUNOS_TURMAS ADD FOREIGN KEY (TURMA) REFERENCES TURMAS(ID_TURMA) ON DELETE CASCADE;\n" +
-                " ALTER TABLE TURMAS ADD FOREIGN KEY (ALUNO) REFERENCES ALUNOS(ID_ALUNO) ON DELETE CASCADE;\n";
+                " ALTER TABLE ALUNOS_TURMAS ADD FOREIGN KEY (ALUNO) REFERENCES ALUNOS(ID_ALUNO) ON DELETE CASCADE;\n";
 
         stmt.executeUpdate(sql);
 

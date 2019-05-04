@@ -62,7 +62,7 @@ public class AlteraDisciplina extends PersistenciaJdbc {
         pstmt.setLong(2,disciplina.getId());
         pstmt.executeUpdate();
 
-        logger.info("O curso da disciplina [" + disciplina.getNome() + "]foi alterado corretamente!");
+        logger.info("O curso da disciplina [" + disciplina.getNome() + " ]foi alterado corretamente!");
 
         return true;
     }

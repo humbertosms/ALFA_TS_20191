@@ -14,13 +14,11 @@ public class TableAlunosTurmasCreate extends PersistenciaJdbc {
 
         logger.info("Criando a tabela Alunos_Turmas");
 
-        String sql = "CREATE TABLE IF NOT EXISTS ALUNO_TURMAS(\n" +
+        String sql = "CREATE TABLE IF NOT EXISTS ALUNOS_TURMAS(\n" +
                 "ID_ALUNOS_TURMAS LONG NOT NULL PRIMARY KEY,\n" +
-                "SEMESTRE VARCHAR(5) NOT NULL," +
                 "NOTA1 DECIMAL(4,2)," +
                 "NOTA2 DECIMAL(4,2)," +
                 "FREQUENCIA INTEGER," +
-                "DISCIPLINA LONG NOT NULL," +
                 "ALUNO LONG NOT NULL, " +
                 "TURMA LONG NOT NULL" +
                 ")";

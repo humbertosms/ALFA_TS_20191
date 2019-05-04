@@ -17,11 +17,7 @@ public class TableTurmasCreate extends PersistenciaJdbc {
         String sql = "CREATE TABLE IF NOT EXISTS TURMAS(\n" +
                 "ID_TURMA LONG NOT NULL PRIMARY KEY,\n" +
                 "SEMESTRE VARCHAR(5) NOT NULL," +
-                "NOTA1 DECIMAL(4,2)," +
-                "NOTA2 DECIMAL(4,2)," +
-                "FREQUENCIA INTEGER," +
                 "DISCIPLINA LONG NOT NULL," +
-                "ALUNO LONG NOT NULL, " +
                 "PROFESSOR LONG NOT NULL" +
                 ")";
 
