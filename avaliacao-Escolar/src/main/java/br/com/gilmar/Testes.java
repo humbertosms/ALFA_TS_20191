@@ -11,7 +11,7 @@ public class Testes {
 	public static void main(String[] args) {
 		try {
 			Avaliacao avaliacao = new Avaliacao();
-			/* pega o arquiivo do Excel */
+			/* pega o arquiivo do Excel  */
 			Workbook workbook = Workbook.getWorkbook(new File("C:/Users/Aluno/Documents/Atividade 1.xls"));
 			/* pega a primeira planilha dentro do arquivo XLS */
 			Integer linha = 2;
