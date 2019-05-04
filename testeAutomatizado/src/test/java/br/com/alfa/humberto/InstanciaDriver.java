@@ -11,7 +11,7 @@ public class InstanciaDriver {
 
 		final String OS = System.getProperty("os.name").toLowerCase();
 
-		String urlDriver = OS.contains("win") ? "src/test/resources/chromedriver.exe"
+		String urlDriver = OS.contains("win") ? "src/test/resources/chromedriver.exe --whitelist-ip %*"
 				: "src/test/resources/chromedriver";
 
 		System.setProperty("webdriver.chrome.driver", urlDriver);
